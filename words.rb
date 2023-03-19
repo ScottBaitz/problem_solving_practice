@@ -13,3 +13,12 @@ words.each do |word|
     puts word
   end
 end
+
+puts ""
+
+words.each do |word|
+  if word.include?("t")
+    word ["t"] = "T"
+    puts word
+  end
+end
