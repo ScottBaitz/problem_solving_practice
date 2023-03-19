@@ -5,3 +5,11 @@ words.each do |word|
     puts word
   end
 end
+
+puts ""
+
+words.each do |word|
+  if word.start_with?("s")
+    puts word
+  end
+end
