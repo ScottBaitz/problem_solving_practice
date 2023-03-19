@@ -1,24 +1,29 @@
-words = ["statuesque", "pig", "cycle", "abaft", "embarrass", "hilarious", "dog", "act", "amuck", "sour", "incredible", "didactic"]
+words = %w[statuesque pig cycle abaft embarrass hilarious dog act amuck sour incredible
+           didactic]
 
-words.each do |word|
-  if word.length > 3
-    puts word
+def length_greater_3(user_entry)
+  user_entry.each do |word|
+    puts word if word.length > 3
   end
 end
 
-puts ""
-
-words.each do |word|
-  if word.start_with?("s")
-    puts word
+def starts_with_s(user_entry)
+  user_entry.each do |word|
+    puts word if word.start_with?('s')
   end
 end
 
-puts ""
-
-words.each do |word|
-  if word.include?("t")
-    word ["t"] = "T"
-    puts word
+def capitalize_t(user_entry)
+  user_entry.each do |word|
+    if word.include?('t')
+      word['t'] = 'T'
+      puts word
+    end
   end
 end
+
+capitalize_t(words)
+puts ''
+starts_with_s(words)
+puts ''
+length_greater_3(words)
